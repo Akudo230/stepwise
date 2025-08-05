@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentor Dashboard</title>
+  <link rel="stylesheet" href="mentor-dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Header -->
+    <header class="dashboard-header">
+      <div class="logo">CareerMentor</div>
+      <div class="welcome">
+        <span id="welcome-text">Welcome, Mentor!</span>
+        <img src="https://via.placeholder.com/40" alt="Profile" class="profile-pic" />
+        <button class="dark-mode-toggle">🌙</button>
+        <button class="logout-btn">Logout</button>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="dashboard-main">
+      <!-- Left Content -->
+      <div class="main-left">
+
+        <!-- Profile Overview -->
+        <section class="profile-overview">
+          <h2>👤 Profile Overview</h2>
+          <p><strong>Bio:</strong> Passionate mentor with 10+ years of experience in tech and career coaching.</p>
+          <p><strong>Qualification:</strong> M.Tech in Computer Science</p>
+          <label><input type="checkbox" id="availability-toggle" checked /> Available for Sessions</label>
+        </section>
+
+        <!-- Upcoming Appointments -->
+        <section class="appointments">
+          <h2>📅 Upcoming Appointments</h2>
+          <table class="appointment-table" id="appointments-table">
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Date & Time</th>
+                <th>Topic</th>
+                <th>Reason</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="appointments-body">
+              <!-- Filled by JS -->
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Past Sessions -->
+        <section class="messages">
+          <h2>🗓️ Past Sessions & Notes</h2>
+          <ul>
+            <li><strong>Ravi Kumar:</strong> AI Intro (2025-07-15) - <em>Good engagement and questions.</em></li>
+          </ul>
+        </section>
+
+        <!-- Student Requests -->
+        <section class="messages">
+          <h2>📨 Student Messages</h2>
+          <div id="messages-container"></div>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>📊 Quick Stats</h2>
+        <div class="stat">Total Sessions: <span id="total-sessions">0</span></div>
+        <div class="stat">Pending Requests: <span id="pending-requests">0</span></div>
+        <div class="stat">Reviews: <span id="review-count">4.8 ★</span></div>
+
+        <h3>🌟 Ratings</h3>
+        <p>“Great mentor, very helpful!” - Ankit</p>
+
+        <h3>🔔 Notifications</h3>
+        <ul>
+          <li>New booking from Rahul (10 AM)</li>
+        </ul>
+
+        <h3>⚙️ Support</h3>
+        <button class="logout-btn">Update Profile</button>
+        <button class="logout-btn">Help & Support</button>
+      </aside>
+    </div>
+  </div>
+
+  <!-- Allot Modal -->
+  <div class="modal" id="allotModal">
+    <div class="modal-content">
+      <h3>Reschedule Session</h3>
+      <label>Date: <input type="date" id="new-date" /></label>
+      <label>Time: <input type="time" id="new-time" /></label>
+      <button onclick="submitNewSession()">Submit</button>
+      <button onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+
+  <script src="mentor-dashboard.js"></script>
+</body>
+</html>

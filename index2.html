@@ -1,0 +1,153 @@
+**Career Guidance Platform – Complete HTML Code with All Features**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI-powered Career Guidance Platform" />
+  <title>Career Navigator</title>
+  <link rel="stylesheet" href="style2.css" />
+</head>
+<body>
+  <header>
+    <h1>Career Navigator</h1>
+    <nav class="tab-buttons">
+      <button onclick="showTab('school')">School Student</button>
+      <button onclick="showTab('college')">College Student</button>
+      <button onclick="showTab('professional')">Professional</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Preference Section Tabs -->
+    <section id="school" class="tab-content">
+      <h2>School Student</h2>
+      <label for="school-class">Class:</label>
+      <select id="school-class">
+        <option>Class 8</option>
+        <option>Class 9</option>
+        <option>Class 10</option>
+        <option>Class 11</option>
+        <option>Class 12</option>
+      </select>
+    </section>
+
+    <section id="college" class="tab-content hidden">
+      <h2>College Student</h2>
+      <label for="college-course">Course:</label>
+      <select id="college-course">
+        <option>B.Tech</option>
+        <option>B.Sc</option>
+        <option>M.Tech</option>
+        <option>PhD</option>
+      </select>
+
+      <label for="college-branch">Branch/Stream:</label>
+      <select id="college-branch">
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>Mechanical</option>
+        <option>Civil</option>
+      </select>
+    </section>
+
+    <section id="professional" class="tab-content hidden">
+      <h2>Professional</h2>
+      <label for="prof-field">Current Field:</label>
+      <select id="prof-field">
+        <option>Doctor</option>
+        <option>Graphic Designer</option>
+        <option>Software Developer</option>
+        <option>Civil Engineer</option>
+      </select>
+
+      <label><input type="checkbox" id="switch-career" onclick="toggleSwitchField()" /> Want to switch career?</label>
+      <div id="new-field-div" class="hidden">
+        <label for="new-field">Preferred New Field:</label>
+        <select id="new-field">
+          <option>Web Development</option>
+          <option>AI/ML</option>
+          <option>UI/UX</option>
+          <option>Data Analyst</option>
+        </select>
+      </div>
+    </section>
+
+    <button onclick="saveAndContinue()">Continue</button>
+
+    <!-- Real Experts Section -->
+    <section id="real-experts">
+      <h2>Meet Our Career Experts</h2>
+      <div class="experts-grid">
+        <div class="expert-card">
+          <h3>Dr. Rina Sharma</h3>
+          <p>PhD in Education • 15+ yrs guiding school students</p>
+        </div>
+        <div class="expert-card">
+          <h3>Mr. Arjun Patel</h3>
+          <p>Ex-IIT • Career Mentor for B.Tech & M.Tech aspirants</p>
+        </div>
+        <div class="expert-card">
+          <h3>Ms. Priya Verma</h3>
+          <p>HR Consultant • Transition Specialist for Professionals</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="appointments">
+      <h2>Book an Appointment</h2>
+      <label>Date: <input type="date" /></label>
+      <label>Time: <input type="time" /></label>
+      <button>Book Free Session</button>
+    </section>
+
+    <!-- AI Chatbot -->
+    <section id="chatbot">
+      <h2>Ask our AI</h2>
+      <div class="chat-window">
+        <div class="chat-bubble bot">Hello! What would you like help with today?</div>
+        <input type="text" placeholder="Type your question here..." />
+      </div>
+    </section>
+
+    <!-- Popular Questions FAQ -->
+    <section id="faq">
+      <h2>Popular Questions</h2>
+      <details>
+        <summary>How do I choose the right stream after Class 10?</summary>
+        <p>Take interest-based career quizzes and speak with a counselor.</p>
+      </details>
+      <details>
+        <summary>What are the most in-demand tech careers?</summary>
+        <p>AI/ML, Cybersecurity, Data Science, and Full-Stack Web Dev.</p>
+      </details>
+    </section>
+
+    <!-- Career Quiz -->
+    <section id="quiz">
+      <h2>Discover Your Career Fit</h2>
+      <p><strong>Question 1:</strong> Do you enjoy solving logic puzzles?</p>
+      <label><input type="radio" name="q1" /> Yes</label>
+      <label><input type="radio" name="q1" /> No</label>
+      <br />
+      <button>Submit Quiz</button>
+    </section>
+
+    <!-- Advisor Communication -->
+    <section id="advisor-comm">
+      <h2>Message an Advisor</h2>
+      <textarea placeholder="Write your question..."></textarea>
+      <br />
+      <button>Send First Message (Free)</button>
+    </section>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>
+
+

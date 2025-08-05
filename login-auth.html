@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mentor Auth Page</title>
+  <link rel="stylesheet" href="login-auth.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+</head>
+<body>
+   
+
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button class="b1" >Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign in</h1>
+        <input type="email" placeholder="Email/Username" />
+        <input type="password" placeholder="Password" />
+        <button class="b2">Sign In</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected, please login with your info</p>
+          <button class="ghost" id="signIn">Sign In</button>
+          <br>
+          <button id="googleSignInBtn" style="background: linear-gradient(to right, #4285F4, #34A853); color: white; padding: 10px 20px; border: none; border-radius: 20px;">
+                  Sign up with Google
+          </button>
+
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, User!</h1>
+          <p>Enter your personal details and start your journey with us</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- <script src="mentor-auth.js"></script> -->
+<script>
+  // Replace this with your actual client ID from Google Cloud Console
+  const CLIENT_ID = "792375564264-pbqpma68qhpr16m9idpfmli9sga00hbf.apps.googleusercontent.com";
+
+  const googleSignInBtn = document.getElementById("googleSignInBtn");
+
+  googleSignInBtn.addEventListener("click", () => {
+    google.accounts.id.initialize({
+      client_id: CLIENT_ID,
+      callback: handleCredentialResponse
+    });
+
+    google.accounts.id.prompt(); // Shows popup
+  });
+
+  function handleCredentialResponse(response) {
+    const token = response.credential;
+    const userData = jwt_decode(token);
+    console.log("User info from Google:", userData);
+
+    // Show user name/email or send to your backend here
+    alert(`Hello ${userData.name}, signed in with Google!`);
+  }
+</script>
+
+  <!-- Google Identity Services script -->
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+
+<!-- Optional: jwt-decode to parse the token -->
+<script src="https://cdn.jsdelivr.net/npm/jwt-decode@3.1.2/build/jwt-decode.min.js"></script>
+
+ <script src="login-auth.js"></script> 
+
+</body>
+</html>

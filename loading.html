@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stepwise</title>
+  <link rel="stylesheet" href="loading.css">
+ 
+
+<body>
+  <!-- Loading Logo -->
+  <div class="loader-container" id="loader">
+    <div class="stepwise-logo">
+      <div class="bar bar1"></div>
+      <div class="bar bar2"></div>
+      <div class="bar bar3"></div>
+      <span class="logo-text">Stepwise</span>
+    </div>
+    <p class="loading-text">Loading...</p>
+  </div>
+
+  <!-- Preference Screen -->
+  <div class="preference-container " id="preference">
+    <div class="background-animation"></div>
+    <h1>Who are you?</h1>
+   
+    <div class="btn-group">
+       <div  class="cont"> 
+      <img src="user.png" alt="mentor" class="card">
+      <button onclick="chooseRole('student')">Student</button>
+    </div>
+    <div class="cont" >
+      <img src="mentor2.png" alt="user" class="card">
+      <button onclick="chooseRole('mentor')">Mentor</button>
+    </div>
+     
+      
+    </div>
+  </div>
+
+  <script src="loading.js"></script>
+  <!-- <script>
+    function chooseRole(role) {
+      if (role === 'student') {
+        window.location.href = 'student-dashboard.html'; // Change to actual page
+      } else if (role === 'mentor') {
+        window.location.href = 'mentor-form.html'; // Change to actual page
+      }
+    }
+  </script> -->
+</body>
+</html>

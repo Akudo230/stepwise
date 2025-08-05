@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StepWise</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="stepwise-logo">
+            <div class="bar bar1"></div>
+            <div class="bar bar2"></div>
+            <div class="bar bar3"></div>
+                <!-- <span class="logo-text">Stepwise</span> -->
+            
+
+            <h1><span class="step">Step</span><span class="wise">wise</span></h1>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#" class="nav-link active" data-page="home" aria-label="Home page">Home</a></li>
+                <li><a href="#" class="nav-link" data-page="experts" aria-label="Browse experts">Experts</a></li>
+                <li><a href="#" class="nav-link" data-page="booking" aria-label="Book appointment">Booking</a></li>
+                <li><a href="#" class="nav-link" data-page="chatbot" aria-label="AI Chatbot">AI Chat</a></li>
+                <li><a href="#" class="nav-link" data-page="faq" aria-label="Frequently asked questions">FAQ</a></li>
+                <li><a href="#" class="nav-link" data-page="quiz" aria-label="Career quiz">Quiz</a></li>
+                <li><a href="#" class="nav-link" data-page="messaging" aria-label="Messages">Messages</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    
+
+
+    <!-- HOME PAGE -->
+    <div id="home" class="page active">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Transform Your Career Journey</h1>
+                    <p class="hero-subtitle">Connect with expert career counselors, take personalized assessments, and get AI-powered guidance to unlock your potential and achieve your professional goals.</p>
+                    <div class="hero-buttons">
+                        <a href="#" class="btn btn-primary" data-page="experts">
+                            <i class="fas fa-user-tie"></i>
+                            Find an Expert
+                        </a>
+                        <a href="#" class="btn btn-secondary" data-page="chatbot">
+                            <i class="fas fa-robot"></i>
+                            Try AI Counselor
+                        </a>
+                        <a href="#" class="btn btn-outline" data-page="quiz">
+                            <i class="fas fa-chart-bar"></i>
+                            Take Career Quiz
+                        </a>
+                    </div>
+                     <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number"></span>
+                            <span class="stat-label"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number"></span>
+                            <span class="stat-label"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number"></span>
+                            <span class="stat-label"></span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number"></span>
+                            <span class="stat-label"></span>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Why Choose <i>StepWise</i>?</h2>
+                    <p class="section-subtitle">Comprehensive career guidance tailored to your unique needs and aspirations</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="feature-title">Expert Counselors</h3>
+                        <p class="feature-description">Connect with certified career counselors with years of industry experience across various fields and specializations.</p>
+                    </div>
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">AI-Powered Guidance</h3>
+                        <p class="feature-description">Get instant career advice and personalized recommendations from our advanced AI counselor available 24/7.</p>
+                    </div>
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="feature-title">Career Assessments</h3>
+                        <p class="feature-description">Take comprehensive quizzes to discover your strengths, interests, and ideal career paths with detailed analysis.</p>
+                    </div>
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="feature-title">Flexible Scheduling</h3>
+                        <p class="feature-description">Book sessions at your convenience with our easy-to-use scheduling system and multiple time slot options.</p>
+                    </div>
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="feature-title">Ongoing Support</h3>
+                        <p class="feature-description">Stay connected with your counselor through our messaging system for continuous guidance and support.</p>
+                    </div>
+                    <div class="feature-card card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Privacy & Security</h3>
+                        <p class="feature-description">Your personal information and career discussions are completely secure and confidential.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experts-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured Career Experts</h2>
+                    <p class="section-subtitle">Meet our top-rated counselors who are ready to help you achieve your career goals</p>
+                </div>
+                <div class="experts-carousel">
+                    <div class="expert-card card">
+                        <div class="expert-avatar">P1</div>
+                        <div class="expert-name">Person 1</div>
+                        <div class="expert-specialty">Technology & Engineering</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="expert-bio">15+ years helping tech professionals transition and grow their careers in Silicon Valley. Specialized in software engineering and AI careers.</p>
+                        <div class="expert-price">Rs499/hour</div>
+                        <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                    </div>
+                    <div class="expert-card card">
+                        <div class="expert-avatar">P2</div>
+                        <div class="expert-name">Person 2</div>
+                        <div class="expert-specialty">Business & Finance</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="expert-bio">Former Fortune 500 executive specializing in leadership development and career transitions in finance and consulting.</p>
+                        <div class="expert-price">Rs599/hour</div>
+                        <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                    </div>
+                    <div class="expert-card card">
+                        <div class="expert-avatar">P3</div>
+                        <div class="expert-name">Person 3</div>
+                        <div class="expert-specialty">Healthcare & Medicine</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="expert-bio">Board-certified physician turned career counselor, helping healthcare professionals navigate their career paths and transitions.</p>
+                        <div class="expert-price">rs450/hour</div>
+                        <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- EXPERTS PAGE -->
+    <div id="experts" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Career Experts</h1>
+                <p class="page-description">Browse and connect with our certified career counselors specialized in various industries</p>
+            </div>
+            
+            <div class="filters">
+                <button class="filter-btn " data-filter="all">All Experts</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="creative">Creative</button>
+            </div>
+
+            <div class="experts-grid">
+                <div class="expert-card-detailed card" data-category="technology">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P1</div>
+                        <div class="expert-info">
+                            <h3>Person 1</h3>
+                            <div class="expert-specialty">Technology & Engineering</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(127 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">PhD Computer Science</span>
+                        <span class="badge">15+ Years Experience</span>
+                    </div>
+                    <p class="expert-bio">Specializes in helping tech professionals navigate career transitions, negotiate salaries, and advance into leadership roles. Former Google and Apple executive.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">500+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">98%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">Rs499/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+                
+                <div class="expert-card-detailed card" data-category="business">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P2</div>
+                        <div class="expert-info">
+                            <h3>Person 2</h3>
+                            <div class="expert-specialty">Business & Finance</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(89 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">MBA Harvard</span>
+                        <span class="badge">Fortune 500 Executive</span>
+                    </div>
+                    <p class="expert-bio">Former Fortune 500 executive specializing in leadership development, strategic career planning, and executive coaching for finance and consulting professionals.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">350+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">95%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">599/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+                
+                <div class="expert-card-detailed card" data-category="healthcare">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P3</div>
+                        <div class="expert-info">
+                            <h3>Person 3</h3>
+                            <div class="expert-specialty">Healthcare & Medicine</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(156 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">AIIMS DELHI</span>
+                        <span class="badge">Healthcare Leadership</span>
+                    </div>
+                    <p class="expert-bio">Board-certified physician with expertise in healthcare career transitions, medical specialty selection, and healthcare administration paths.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">420+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">97%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">Rs699/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+
+                <div class="expert-card-detailed card" data-category="education">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P4</div>
+                        <div class="expert-info">
+                            <h3>Person 4</h3>
+                            <div class="expert-specialty">Education & Academia</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(78 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">PhD Education</span>
+                        <span class="badge">Former Dean</span>
+                    </div>
+                    <p class="expert-bio">Former university dean with 20+ years in academia, specializing in educational leadership, research careers, and academic transitions.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">280+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">94%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">Rs799/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+
+                <div class="expert-card-detailed card" data-category="creative">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P5</div>
+                        <div class="expert-info">
+                            <h3>Person 5</h3>
+                            <div class="expert-specialty">Creative & Design</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(92 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">Creative Director</span>
+                        <span class="badge">Award Winner</span>
+                    </div>
+                    <p class="expert-bio">Award-winning creative director with expertise in design, advertising, and creative industry career development and portfolio building.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">190+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">96%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">Rs1100/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+
+                <div class="expert-card-detailed card" data-category="business">
+                    <div class="expert-header">
+                        <div class="expert-avatar-small">P6</div>
+                        <div class="expert-info">
+                            <h3>Person 6</h3>
+                            <div class="expert-specialty">Marketing & Sales</div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>(134 reviews)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expert-badges">
+                        <span class="badge verified">Verified Expert</span>
+                        <span class="badge">VP Marketing</span>
+                        <span class="badge">Digital Expert</span>
+                    </div>
+                    <p class="expert-bio">Former VP of Marketing at leading tech companies, specializing in marketing career growth, digital marketing transitions, and sales leadership.</p>
+                    <div class="expert-stats">
+                        <div class="stat">
+                            <div class="stat-value">310+</div>
+                            <div class="stat-label">Sessions</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">93%</div>
+                            <div class="stat-label">Success Rate</div>
+                        </div>
+                    </div>
+                    <div class="expert-price">Rs1400/hour</div>
+                    <a href="#" class="btn btn-primary" data-page="booking">Book Session</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING PAGE -->
+    <div id="booking" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Book Your Session</h1>
+                <p class="page-description">Choose your preferred date and time for your career counseling session</p>
+            </div>
+            
+            <div class="booking-container">
+                <div class="booking-card">
+                    <h3>Select Date</h3>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button class="calendar-nav" id="prevMonth">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="calendar-month" id="currentMonth">January 2024</div>
+                            <button class="calendar-nav" id="nextMonth">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div class="calendar-weekdays">
+                            <div class="calendar-weekday">Sun</div>
+                            <div class="calendar-weekday">Mon</div>
+                            <div class="calendar-weekday">Tue</div>
+                            <div class="calendar-weekday">Wed</div>
+                            <div class="calendar-weekday">Thu</div>
+                            <div class="calendar-weekday">Fri</div>
+                            <div class="calendar-weekday">Sat</div>
+                        </div>
+                        <div class="calendar-grid" id="calendarGrid">
+                            <!-- Calendar days will be generated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-card">
+                    <div class="time-slots-header">
+                        <h3>Available Time Slots</h3>
+                        <p>Select your preferred time for the session</p>
+                    </div>
+                    <div class="time-slots" id="timeSlots">
+                        <!-- Time slots will be generated by JavaScript -->
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <div class="selected-info" id="selectedInfo" style="display: none;">
+                            <h4>Session Details</h4>
+                            <p><strong>Expert:</strong> Abhishek Kumar</p>
+                            <p><strong>Date:</strong> <span id="selectedDate"></span></p>
+                            <p><strong>Time:</strong> <span id="selectedTime"></span></p>
+                            <p><strong>Duration:</strong> 60 minutes</p>
+                            <p><strong>Price:</strong> Rs1500</p>
+                        </div>
+                        <button class="btn btn-primary" id="confirmBooking" style="width: 100%; margin-top: 1rem;" disabled>
+                            <i class="fas fa-check"></i>
+                            Confirm Booking
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHATBOT PAGE -->
+    <div id="chatbot" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">AI Career Counselor</h1>
+                <p class="page-description">Get instant career guidance from our advanced AI counselor</p>
+            </div>
+            
+            <div class="chatbot-container">
+                <div class="chat-header">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="chat-info">
+                        <h3>CareerBot AI</h3>
+                        <div class="chat-status">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot">
+                        <div class="message-avatar">AI</div>
+                        <div class="message-content">
+                            <p>Hello! I'm your AI Career Counselor. I'm here to help you with career guidance, job search strategies, resume tips, and more. How can I assist you today?</p>
+                            <div class="message-time">Just now</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <div class="quick-action-buttons">
+                        <button class="quick-action" data-message="Help me choose a career path">Choose Career Path</button>
+                        <button class="quick-action" data-message="Review my resume">Resume Review</button>
+                        <button class="quick-action" data-message="Prepare for job interview">Interview Prep</button>
+                        <button class="quick-action" data-message="Salary negotiation tips">Salary Tips</button>
+                    </div>
+                </div>
+                
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message here..." maxlength="500">
+                    <button class="btn btn-primary chat-send-btn" id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ PAGE -->
+    <div id="faq" class="page">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Frequently Asked Questions</h1>
+                <p class="page-description">Find answers to common questions about our career counseling services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="faqSearch" placeholder="Search questions...">
+                </div>
+
+                <div class="faq-categories">
+                    <button class="faq-category active" data-category="all">All Questions</button>
+                    <button class="faq-category" data-category="services">Services</button>
+                    <button class="faq-category" data-category="pricing">Pricing</button>
+                    <button class="faq-category" data-category="booking">Booking</button>
+                    <button class="faq-category" data-category="technical">Technical</button>
+                </div>
+
+                <div class="faq-list" id="faqList">
+                    <div class="faq-item" data-category="services">
+                        <div class="faq-question">
+                            <span>What types of career counseling services do you offer?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer comprehensive career counseling services including one-on-one sessions with expert counselors, AI-powered career guidance, personality and skills assessments, resume reviews, interview preparation, salary negotiation coaching, and career transition support.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="services">
+                        <div class="faq-question">
+                            <span>How qualified are your career counselors?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>All our career counselors are certified professionals with advanced degrees and extensive industry experience. They undergo rigorous screening and maintain ongoing professional development to provide you with the best guidance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="pricing">
+                        <div class="faq-question">
+                            <span>What are your pricing plans?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our pricing varies by counselor expertise and session type. Individual sessions range from $110-$150 per hour. We also offer package deals and the AI counselor is available 24/7 at no additional cost for basic guidance.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="booking">
+                        <div class="faq-question">
+                            <span>How do I book a session with a counselor?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can book a session by browsing our expert profiles, selecting your preferred counselor, choosing an available time slot from their calendar, and completing the booking process. Payment is processed securely at the time of booking.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" data-category="booking">
+                        <div class="faq-question">
+                            <span>Can I reschedule or cancel my appointment?</span>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, you can reschedule or cancel your appointment up to 24 hours before the scheduled time without any penalty. Cancellations within 24 hours may incur a fee. You can manage your bookings through your account dashboard.</p>
+                        </div>
+                    </div>
+               </div>
+            </div>  
+        </div>
+    </div> 
+  <script src="script.js"></script>
+  
+</body>
+</html>             
